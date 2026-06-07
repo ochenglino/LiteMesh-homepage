@@ -1,2 +1,2 @@
-# LiteCAD
-This is the homepage for LiteCAD, including related resources.
+# LiteMesh
+This is the homepage for LiteMesh, including related resources.
