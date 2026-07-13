@@ -59,8 +59,7 @@ body {
 }
 .author:hover,
 .author:focus-visible {
-    color: #cf1200;
-    text-decoration: underline;
+    color: #ff411f;
 }
 
 .affiliations {
@@ -108,8 +107,7 @@ body {
 
 .affiliation:hover,
 .affiliation:focus-visible {
-    color: #cf1200;
-    text-decoration: underline;
+    color: #ff411f;
 }
 
 .affiliation:hover .affiliation-emblem,
@@ -268,7 +266,7 @@ body {
 }
 
 .video-container iframe:hover {
-    transform: scale(1.07);
+    transform: scale(1.01);
 }
 /* 方法图片 */
 .method-img {
@@ -298,7 +296,7 @@ body {
 }
 
 .results-grid img:hover {
-    transform:  scale(1.07);
+    transform:  scale(1.01);
   }
 .result-item {
     text-align: center;
@@ -313,7 +311,7 @@ body {
 }
 
 .result-item img:hover {
-    transform:  scale(1.08);
+    transform:  scale(1.01);
 }
 
 . result-item p {
