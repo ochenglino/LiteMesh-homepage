@@ -42,26 +42,79 @@ body {
 .title:hover {
     transform: scaleX(1.05);
 }
+
 .authors {
-    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 1.0em;
     margin-bottom: 15px;
 }
 
 .author {
-    margin:  0 10px;
-    color: #555;
+    color: rgb(52, 104, 188);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.author:hover,
+.author:focus-visible {
+    color: #cf1200;
+    text-decoration: underline;
 }
 
 .affiliations {
-    font-size: 1em;
-    color: #afafaf;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px 42px;
+    font-size: 0.8em;
+    margin-bottom: 14px;
 }
 
 .affiliation {
-    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    color: #154189;
+    line-height: 1.25;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
+.affiliation-emblem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 6px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.affiliation-emblem img {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.affiliation-name {
+    display: block;
+}
+
+.affiliation:hover,
+.affiliation:focus-visible {
+    color: #cf1200;
+    text-decoration: underline;
+}
+
+.affiliation:hover .affiliation-emblem,
+.affiliation:focus-visible .affiliation-emblem {
+    transform: translateY(-2px);
+}
 .conference {
     font-size: 1.1em;
     font-weight: 500;
@@ -74,29 +127,76 @@ body {
 .links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 18px 34px;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 26px;
 }
 
-.btn {
-    display: inline-flex;
+.resource-link {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    background: #3498db;
-    color: white;
+    width: 96px;
+    color: #0057c2;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight:  500;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 0.92em;
+    line-height: 1.15;
+    text-align: center;
 }
 
-.btn:hover {
-    background: #154189;
+.resource-link-wide {
+    width: 170px;
+}
+
+.resource-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 54px;
+    margin-bottom: 4px;
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px #f7f7f7, 0 1px 2px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+}
+
+.resource-icon img {
+    display: block;
+    max-width: 46px;
+    max-height: 46px;
+}
+
+.resource-label,
+.resource-note {
+    color: #0057c2;
+}
+
+.resource-note {
+    white-space: nowrap;
+}
+
+.resource-link:hover .resource-icon,
+.resource-link:focus-visible .resource-icon {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 0 1px #f7f7f7, 0 3px 7px rgba(0,0,0,0.22);
+}
+
+.resource-link:hover .resource-label,
+.resource-link:hover .resource-note,
+.resource-link:focus-visible .resource-label,
+.resource-link:focus-visible .resource-note {
+    text-decoration: underline;
+}
+
+.author:focus-visible,
+.affiliation:focus-visible,
+.resource-link:focus-visible {
+    outline: 2px solid #154189;
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 /* 主图区域 */
@@ -268,6 +368,24 @@ code {
         font-size: 1em;
     }
 
+    .affiliations {
+        gap: 12px 18px;
+    }
+
+    .affiliation {
+        width: 180px;
+    }
+
+    .affiliation-emblem {
+        width: 62px;
+        height: 62px;
+    }
+
+    .affiliation-emblem img {
+        max-width: 52px;
+        max-height: 52px;
+    }
+
     .section {
         padding: 25px 15px;
     }
@@ -277,12 +395,14 @@ code {
     }
 
     .links {
-        flex-direction: column;
-        align-items: center;
+        gap: 16px 20px;
     }
 
-    .btn {
-        width: 200px;
-        justify-content: center;
+    .resource-link {
+        width: 88px;
+    }
+
+    .resource-link-wide {
+        width: 160px;
     }
 }
