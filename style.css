@@ -18,7 +18,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: none;
 }
 
 /* 标题区域 */
@@ -26,8 +26,8 @@ body {
     text-align: center;
     background: #e3e3e3;
     margin-top: 20px;
-    padding: 60px 20px 40px;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 60px 20px 10px;
+    border-bottom: 0;
 }
 
 .title {
@@ -129,7 +129,9 @@ body {
     align-items: flex-start;
     gap: 18px 34px;
     flex-wrap: wrap;
-    margin-top: 26px;
+    margin: 26px -20px -40px;
+    padding: 40px 20px 40px;
+    background: white;
 }
 
 .resource-link {
@@ -223,10 +225,10 @@ body {
 /* 内容区域 */
 .section {
     background: white;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding: 7px 40px 15px;
-    border-radius: 8px;
-    box-shadow:  0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .section h2 {
@@ -355,7 +357,7 @@ code {
     color: #777;
     background: white;
     border-top: 1px solid #e0e0e0;
-    margin-top: 40px;
+    margin-top: 0;
 }
 
 /* 响应式设计 */
