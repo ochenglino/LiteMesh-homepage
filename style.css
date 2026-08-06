@@ -9,15 +9,24 @@ body {
     font-family: "Times New Roman", Times, serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #ececec;
 
 }
 
 /* 容器样式 */
+.page-shell {
+    width: 80vw;
+    max-width: 80vw;
+    margin: 20px auto 24px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.45);
+}
+
 .header, .teaser, .section, .footer{
-    max-width: 1000px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 20px 1px;
     box-shadow: none;
 }
 
@@ -25,7 +34,7 @@ body {
 .header {
     text-align: center;
     background: #e3e3e3;
-    margin-top: 20px;
+    margin-top: 0;
     padding: 60px 20px 10px;
     border-bottom: 0;
 }
@@ -130,7 +139,7 @@ body {
     gap: 18px 34px;
     flex-wrap: wrap;
     margin: 26px -20px -40px;
-    padding: 40px 20px 40px;
+    padding: 20px 20px 20px;
     background: white;
 }
 
@@ -213,7 +222,7 @@ body {
     display: block;
     margin: 0 auto;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.1);*/
 }
 
 .caption {
@@ -226,15 +235,15 @@ body {
 .section {
     background: white;
     margin-bottom: 0;
-    padding: 7px 40px 15px;
+    padding: 7px 45px 5px;
     border-radius: 0;
     box-shadow: none;
 }
 
 .section h2 {
     font-size: 1.5em;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     color: #2c3e50;
     border-bottom: 3px solid #154189;
     padding-bottom: 10px;
@@ -252,22 +261,28 @@ body {
 /* 视频容器 */
 .video-container {
     width: 100%;
-    max-width: 1000px;
+    max-width: none;
     display: block;
-    margin: 20px auto;
+    margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.1);*/
 }
 
-.video-container iframe {
+.video-container iframe,
+.video-container video {
+    display: block;
     width: 100%;
-    height: 540px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
+    border: 0;
+    background: #000;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.1);*/
 }
 
-.video-container iframe:hover {
+.video-container iframe:hover,
+.video-container video:hover {
     transform: scale(1.01);
 }
 /* 方法图片 */
@@ -277,7 +292,7 @@ body {
     display: block;
     margin: 20px auto;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.1);*/
 }
 
 /* 结果网格 */
@@ -294,7 +309,7 @@ body {
     margin: 0 auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.1);*/
 }
 
 .results-grid img:hover {
@@ -308,7 +323,7 @@ body {
 .result-item img {
     width: 100%;
     border-radius: 6px;
-    box-shadow:  0 2px 8px rgba(0,0,0,0.1);
+    /*box-shadow:  0 2px 8px rgba(0,0,0,0.1);*/
     transition: transform 0.3s ease;
 }
 
@@ -356,8 +371,9 @@ code {
     padding: 30px 20px;
     color: #777;
     background: white;
-    border-top: 1px solid #e0e0e0;
+    border-top: 0;
     margin-top: 0;
+    box-shadow: none;
 }
 
 /* 响应式设计 */
